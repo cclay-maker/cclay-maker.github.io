@@ -1,4 +1,42 @@
 <body>hello world</body>
+<style>
+  .iframe-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .iframe-wrapper iframe {
+    display: block;
+    width: 100%;
+    min-height: 650px;     /* fallback height */
+    border: 0;
+    overflow: hidden;
+  }
+
+  /* Optional: taller on larger screens */
+  @media (min-width: 768px) {
+    .iframe-wrapper iframe {
+      min-height: 750px;
+    }
+  }
+
+  iframe {
+  background: transparent;
+}
+
+  /* Apply to the body or a container behind the iframe */
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* or try a pattern: */
+  /* background: repeating-linear-gradient(
+    45deg,
+    #f0f0f0,
+    #f0f0f0 10px,
+    #e0e0e0 10px,
+    #e0e0e0 20px
+  ); */
+}
+</style>
 <div class="iframe-wrapper">
   <iframe
     id="embedded-form"
