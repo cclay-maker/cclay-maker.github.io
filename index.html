@@ -1,46 +1,15 @@
 <body>hello world</body>
-<style>
-  .iframe-wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .iframe-wrapper iframe {
-    display: block;
-    width: 100%;
-    min-height: 650px;     /* fallback height */
-    border: 0;
-    overflow: hidden;
-  }
-
-  /* Optional: taller on larger screens */
-  @media (min-width: 768px) {
-    .iframe-wrapper iframe {
-      min-height: 750px;
-    }
-  }
-
-  iframe {
-  background: transparent;
-}
-
-  /* Apply to the body or a container behind the iframe */
-body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  /* or try a pattern: */
-  /* background: repeating-linear-gradient(
-    45deg,
-    #f0f0f0,
-    #f0f0f0 10px,
-    #e0e0e0 10px,
-    #e0e0e0 20px
-  ); */
-}
-</style>
-<div class="iframe-wrapper">
-  <iframe
-    id="embedded-form"
-    src="https://blah-blah.qa.dev-rb.com/Donate/Plugin?narrow=true"
-    >
-  </iframe>
-</div>
+<!--BEGIN RALLYBOUND CODE -->
+<div id="rbEmbedded"><noscript style="margin:0 auto; display:block; text-align:center; font-size:17px; padding:20px">Please enable javascript on your browser.<br /> You may also try and visit<a href="http://stand-alone-ticket.qa.dev-rb.com">Stand alone ticket</a></noscript></div>
+<script type="text/javascript">
+    var _rbConf = _rbConf || {};
+    _rbConf.account = 'stand-alone-ticket.qa.dev-rb.com';
+    _rbConf.isTickets = true;
+    _rbConf.frameName = 'rbDon';
+    _rbConf.otherParams = {};
+    //_rbConf.tryApplePay = false;
+    //_rbConf.defaultAmount = 100; // optional
+    //_rbConf.onDonation = function(donationAmount, donationId, donationRecurringId){}; // optional
+    (function (){var rb = document.createElement('script'); rb.type = 'text/javascript'; rb.async = true; rb.src = '//cdn-qa.rallybound.com/Content/Framed/v2/plugin.js?' + new Date().getTime(); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(rb, s); })();
+</script>
+<!--END RALLYBOUND CODE -->
